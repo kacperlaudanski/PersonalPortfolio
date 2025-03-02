@@ -1,7 +1,8 @@
-import { createBrowserRouter, RouterProvider } from 'react-router'
+import { createBrowserRouter, RouterProvider } from 'react-router';
+
 import { GlobalStyles } from './globalStyles';
-import Login from './pages/login/login.component';
-import { Main } from './pages/main/main'
+import { Login } from './pages/login/login.component';
+import { Main } from './pages/main/main';
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
       <GlobalStyles />
       <RouterProvider router={routes} />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

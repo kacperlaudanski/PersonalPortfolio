@@ -1,7 +1,7 @@
-import Form from './components/form/form.component';
+import { Form } from './components/form/form.component';
 import { Container, ContentContainer, Header, Wrapper } from './login.styled';
 
-export default function Login() {
+export const Login: React.FC = (): JSX.Element => {
 
   return (
     <Wrapper>
@@ -15,5 +15,5 @@ export default function Login() {
         </ContentContainer>
       </Container>
     </Wrapper>
-  )
-}
+  );
+};
