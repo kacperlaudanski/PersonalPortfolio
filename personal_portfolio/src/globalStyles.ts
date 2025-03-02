@@ -12,7 +12,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     margin: 0;
     padding: 0%;
-    background-color: ${Color.Gray200};
+    background-color: ${Color.Gray300};
   }
 
   h1,

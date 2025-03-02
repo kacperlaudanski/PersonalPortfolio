@@ -1,8 +1,7 @@
 import { styled } from 'styled-components';
 
-export const FormWrapper = styled.form``;
-
-export const Input = styled.input`
-  width: 300px;
-  height: 40px;
+export const FormWrapper = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 `;

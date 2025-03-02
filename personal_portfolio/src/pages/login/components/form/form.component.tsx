@@ -2,10 +2,11 @@ import * as React from 'react';
 import { ChangeEvent } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Dispatch } from 'redux';
+import { Input } from '../../../../components/input/input.component';
 
 import { LoginState, setUsername, setPassword } from '../../redux/login.slice';
 
-import { FormWrapper, Input } from './form.styled';
+import { FormWrapper } from './form.styled';
 
 export const Form: React.FC = (): JSX.Element => {
 
@@ -21,8 +22,8 @@ export const Form: React.FC = (): JSX.Element => {
 
   return (
     <FormWrapper onSubmit={handleLogin}>
-      <Input type='text' onChange={(e: ChangeEvent<HTMLInputElement>) => dispatch(setUsername(e.target.value))} />
-      <Input type='text' onChange={(e: ChangeEvent<HTMLInputElement>) => dispatch(setPassword(e.target.value))} />
+      {/* <Input type='text' onChange={(e: ChangeEvent<HTMLInputElement>) => dispatch(setUsername(e.target.value))} />
+      <Input type='text' onChange={(e: ChangeEvent<HTMLInputElement>) => dispatch(setPassword(e.target.value))} /> */}
       <button>Login</button>
     </FormWrapper>
   );
