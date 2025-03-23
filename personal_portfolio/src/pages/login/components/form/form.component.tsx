@@ -22,8 +22,8 @@ export const Form: React.FC = (): JSX.Element => {
 
   return (
     <FormWrapper onSubmit={handleLogin}>
-      {/* <Input type='text' onChange={(e: ChangeEvent<HTMLInputElement>) => dispatch(setUsername(e.target.value))} />
-      <Input type='text' onChange={(e: ChangeEvent<HTMLInputElement>) => dispatch(setPassword(e.target.value))} /> */}
+      {/* <Input type='text' onChange={(e: React.SyntheticEvent<HTMLInputElement, Event>) => dispatch(setUsername(e.target.value))} />
+      <Input type='text' onChange={(e: React.SyntheticEvent<HTMLInputElement, Event>) => dispatch(setPassword(e.target.value))} /> */}
       <button>Login</button>
     </FormWrapper>
   );
