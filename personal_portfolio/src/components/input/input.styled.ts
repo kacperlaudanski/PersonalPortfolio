@@ -1,4 +1,5 @@
 import { css, RuleSet, styled } from 'styled-components';
+
 import { Color } from '../../enums';
 
 export const InputElement = styled.input`
