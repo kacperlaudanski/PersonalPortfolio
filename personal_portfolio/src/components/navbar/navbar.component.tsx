@@ -1,4 +1,6 @@
-import { Container, LanguageButton, LanguagePanel, Logo, NavItem, NavLink, NavList } from "./navbar.styled";
+import { Link } from "react-router";
+import { Path } from "../../enums";
+import { Container, LanguageButton, LanguagePanel, Logo, NavItem, NavList } from "./navbar.styled";
 
 export const Navbar: React.FC = (): React.JSX.Element => {
   return (
@@ -6,13 +8,13 @@ export const Navbar: React.FC = (): React.JSX.Element => {
       <Logo />
       <NavList>
         <NavItem>
-          <NavLink href=''>Books</NavLink>
+          <Link to={Path.Books}>Books</Link>
         </NavItem>
         <NavItem>
-          <NavLink href=''>Add book</NavLink>
+          <Link to=''>Add book</Link>
         </NavItem>
         <NavItem>
-          <NavLink href=''>Log Out</NavLink>
+          <Link to=''>Log Out</Link>
         </NavItem>
       </NavList>
       <LanguagePanel>

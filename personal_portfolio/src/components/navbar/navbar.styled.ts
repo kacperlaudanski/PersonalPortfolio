@@ -26,7 +26,6 @@ export const NavList = styled.ul`
   list-style: none;
 `;
 export const NavItem = styled.li``;
-export const NavLink = styled.a``;
 
 export const LanguagePanel = styled.div`
   display: flex;

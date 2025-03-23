@@ -1,8 +1,6 @@
 import * as React from 'react';
-import { ChangeEvent } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Dispatch } from 'redux';
-import { Input } from '../../../../components/input/input.component';
 
 import { LoginState, setUsername, setPassword } from '../../redux/login.slice';
 
