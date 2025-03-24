@@ -1,4 +1,4 @@
 export enum ButtonVariant {
-  Small = 'small',
-  Medium = 'medium'
+  Medium = 'medium',
+  Large = 'large'
 }

@@ -7,10 +7,13 @@ export interface ButtonProps {
   variant: ButtonVariant;
   className?: string;
   disabled?: boolean;
+  fullWidth?: boolean;
   reversed?: boolean;
 }
 
 export interface BaseButtonProps {
+  $fullWidth: boolean;
+  $reversed: boolean;
   $theme: ButtonTheme;
   $variant: ButtonVariant;
 }
