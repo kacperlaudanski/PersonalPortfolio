@@ -1,26 +1,22 @@
-import { Link } from "react-router";
-import { Path } from "../../enums";
-import { Container, LanguageButton, LanguagePanel, Logo, NavItem, NavList } from "./navbar.styled";
+import { Avatar, AvatarContainer, EnLanguageButton, ItemsContainer, LanguagePanel, LogoutButton, LogoutContainer, Wrapper } from './navbar.styled';
+import { NavbarProps } from './navbar.types';
 
-export const Navbar: React.FC = (): React.JSX.Element => {
+export const Navbar: React.FC<NavbarProps> = (props: NavbarProps): React.JSX.Element => {
+  const { avatar, onLogout }: NavbarProps = props;
+
   return (
-    <Container>
-      <Logo />
-      <NavList>
-        <NavItem>
-          <Link to={Path.Books}>Books</Link>
-        </NavItem>
-        <NavItem>
-          <Link to=''>Add book</Link>
-        </NavItem>
-        <NavItem>
-          <Link to=''>Log Out</Link>
-        </NavItem>
-      </NavList>
-      <LanguagePanel>
-        <LanguageButton>EN</LanguageButton>
-        <LanguageButton>PL</LanguageButton>
-      </LanguagePanel>
-    </Container>
+    <Wrapper>
+      <ItemsContainer>
+        <LanguagePanel>
+          <EnLanguageButton />
+        </LanguagePanel>
+        <AvatarContainer>
+          <Avatar alt='avatar' src={avatar} />
+        </AvatarContainer>
+        <LogoutContainer>
+          <LogoutButton onClick={onLogout} />
+        </LogoutContainer>
+      </ItemsContainer>
+    </Wrapper>
   );
 };
