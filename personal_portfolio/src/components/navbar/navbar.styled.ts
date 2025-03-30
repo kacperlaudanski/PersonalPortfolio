@@ -14,6 +14,7 @@ export const Wrapper = styled.nav`
   align-items: center;
   box-sizing: border-box;
   border-bottom: 1px solid ${Color.Gray200};
+  z-index: 1;
 `;
 
 export const ItemsContainer = styled.div`

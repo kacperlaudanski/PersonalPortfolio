@@ -27,6 +27,42 @@ export const BooksPage: React.FC = (): JSX.Element => {
           title='Nic mnie nie złamie'
           year='2023'
         />
+                <BookCard 
+          author='David Goggins'
+          image={ExampleImage}
+          title='Nic mnie nie złamie'
+          year='2023'
+        />
+        <BookCard 
+          author='David Goggins'
+          image={ExampleImage}
+          title='Nic mnie nie złamie'
+          year='2023'
+        />
+        <BookCard 
+          author='David Goggins'
+          image={ExampleImage}
+          title='Nic mnie nie złamie'
+          year='2023'
+        />
+                <BookCard 
+          author='David Goggins'
+          image={ExampleImage}
+          title='Nic mnie nie złamie'
+          year='2023'
+        />
+        <BookCard 
+          author='David Goggins'
+          image={ExampleImage}
+          title='Nic mnie nie złamie'
+          year='2023'
+        />
+        <BookCard 
+          author='David Goggins'
+          image={ExampleImage}
+          title='Nic mnie nie złamie'
+          year='2023'
+        />
       </BookGroup>
     </Wrapper>
   )
