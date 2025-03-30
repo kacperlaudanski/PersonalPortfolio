@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router';
 import { GlobalWrapper } from './app.styled';
 
-import { Navbar } from './components';
+import { Navbar, Sidebar } from './components';
 
 import Avatar from './components/navbar/images/avatar.jpeg';
 
@@ -13,6 +13,7 @@ export const Layout: React.FC = (): JSX.Element => {
 
   return (
     <>
+      <Sidebar />
       <Navbar avatar={Avatar} onLogout={handleLogout} />
       <GlobalWrapper>
         <Outlet />
