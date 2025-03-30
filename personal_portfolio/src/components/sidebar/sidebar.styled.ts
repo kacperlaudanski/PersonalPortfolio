@@ -13,10 +13,9 @@ export const Wrapper = styled.aside`
   align-items: center;
   justify-content: center;
   gap: 20px;
-`;
+  transition: width linear .3s;
 
-export const MenuItem = styled.div`
-  width: 25px;
-  height: 25px;
-  background-color: aqua;
+  &:hover {
+    width: 300px;
+  }
 `;

@@ -3,5 +3,6 @@ export enum Path {
   Main = '/home',
   Login = '/login',
   Registration = '/registration',
-  Books = '/books'
+  Books = '/books',
+  AddBook = '/addBook',
 }
