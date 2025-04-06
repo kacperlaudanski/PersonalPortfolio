@@ -1,18 +1,19 @@
+import React from 'react';
 import { Location, useLocation } from 'react-router';
+import { IconName } from '../../../../enums';
+import { Icon } from '../../../icon/icon.component';
 
-import ExampleIcon from './images/library.svg';
-import { Icon, IconContainer, Wrapper } from './sideMenuItem.styled';
+import { IconContainer, Wrapper } from './sideMenuItem.styled';
 import { SideMenuItemProps } from './sideMenuItem.types';
 
 export const SideMenuItem: React.FC<SideMenuItemProps> = (props: SideMenuItemProps): JSX.Element => {
-  const { icon, name, path }: SideMenuItemProps = props;
+  const { path }: SideMenuItemProps = props;
   const { pathname }: Location<string> = useLocation();
 
   return (
     <Wrapper>
       <IconContainer $active={pathname === path}>
-        {/* TODO: Add custom Icon compoennt */}
-        <Icon src={ExampleIcon} />
+        {/* <Icon name={IconName.Logout} size={20} /> */}
       </IconContainer>
     </Wrapper>
   );

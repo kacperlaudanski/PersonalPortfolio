@@ -3,7 +3,6 @@ import { css, styled } from 'styled-components';
 import { Color } from '../../enums';
 
 import EnImage from './images/en.png';
-import LogoutIcon from './images/logout.svg';
 import PlImage from './images/pl.png';
 
 export const Wrapper = styled.nav`
@@ -81,7 +80,6 @@ export const LogoutButton = styled.button`
   background-color: none;
   border: none;
   cursor: pointer;
-  background-image: url(${LogoutIcon});
   background-size: cover;
   background-position: center;
 `;

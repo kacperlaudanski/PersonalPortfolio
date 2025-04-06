@@ -3,5 +3,12 @@
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "module": "esnext",
+    "types": ["vite/client"],
+  },
+  "include": ["./global.d.ts", "src/**/*.d.ts", "vite-env.d.ts"]
 }

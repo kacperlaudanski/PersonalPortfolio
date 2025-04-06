@@ -27,8 +27,3 @@ export const IconContainer = styled.div<SideMenuItemBaseProps>`
   align-items: center;
   justify-content: center;
 `;
-
-export const Icon = styled.img`
-  width: 20px;
-  height: 20px;
-`;
