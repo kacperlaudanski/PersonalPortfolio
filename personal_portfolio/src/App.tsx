@@ -1,3 +1,4 @@
+import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router';
 
 import { Path } from './enums';
@@ -20,15 +21,15 @@ function App() {
           element: <Main />,
         },
         {
-          path: Path.Login,
-          element: <Login />,
-        },
-        {
           path: Path.Books,
           element: <BooksPage />,
         }
       ],
     },
+    {
+      path: Path.Login,
+      element: <Login />,
+    }
   ]);
 
   return (

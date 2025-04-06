@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Dispatch } from 'redux';
+import { Input } from '../../../../components';
 
 import { LoginState, setUsername, setPassword } from '../../redux/login.slice';
 
@@ -20,8 +21,8 @@ export const Form: React.FC = (): JSX.Element => {
 
   return (
     <FormWrapper onSubmit={handleLogin}>
-      {/* <Input type='text' onChange={(e: React.SyntheticEvent<HTMLInputElement, Event>) => dispatch(setUsername(e.target.value))} />
-      <Input type='text' onChange={(e: React.SyntheticEvent<HTMLInputElement, Event>) => dispatch(setPassword(e.target.value))} /> */}
+      <Input type='text' onChange={(e: React.SyntheticEvent<HTMLInputElement, Event>) => dispatch(setUsername(e.target.value))} />
+      <Input type='text' onChange={(e: React.SyntheticEvent<HTMLInputElement, Event>) => dispatch(setPassword(e.target.value))} />
       <button>Login</button>
     </FormWrapper>
   );

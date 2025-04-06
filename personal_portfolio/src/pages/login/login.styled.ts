@@ -35,36 +35,3 @@ export const Header = styled.h1`
   font-size: 32px;
   font-weight: ${FontWeight.Light};
 `;
-
-export const RightBottomShape = styled.img`
-  width: fit-content;
-  height: 400px;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-`;
-
-export const TopLeftShape = styled.img`
-  width: fit-content;
-  height: 400px;
-  position: absolute;
-  top: 0;
-  left: 0;
-`;
-
-
-export const LeftBottomShape = styled.img`
-  width: fit-content;
-  height: 400px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-`;
-
-export const RightTopShape = styled.img`
-  width: fit-content;
-  height: 400px;
-  position: absolute;
-  top: 0;
-  right: 0;
-`;
