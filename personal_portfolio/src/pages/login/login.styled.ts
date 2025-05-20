@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import styled from "styled-components";
 import { Color, FontWeight } from "../../enums";
 
@@ -34,4 +35,26 @@ export const Header = styled.h1`
   color: ${Color.White};
   font-size: 32px;
   font-weight: ${FontWeight.Light};
+`;
+
+export const RegisterContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+`;
+
+export const StyledLink = styled(Link)`
+  font-weight: ${FontWeight.Light};
+  font-size: 14px;
+  color: ${Color.Pink300};
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+export const RegisterText = styled.p`
+  color: ${Color.Gray400};
+  font-size: 14px;
 `;

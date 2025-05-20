@@ -7,6 +7,7 @@ import { Layout } from './layout';
 import { BooksPage } from './pages/books/booksPage.component';
 import { Login } from './pages/login/login.component';
 import { Main } from './pages/main/main';
+import { Registration } from './pages/registration/registration';
 
 function App() {
 
@@ -29,7 +30,11 @@ function App() {
     {
       path: Path.Login,
       element: <Login />,
-    }
+    },
+    {
+      path: Path.Registration,
+      element: <Registration />,
+    },
   ]);
 
   return (
