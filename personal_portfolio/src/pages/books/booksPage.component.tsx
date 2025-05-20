@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { Headline } from '../../components/headline/headline.component';
 import { HeadlineVariant } from '../../enums';
 import { BookGroup, Wrapper } from './booksPage.styled';

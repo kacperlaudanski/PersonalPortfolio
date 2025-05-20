@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import styled from "styled-components";
 import { Color, FontWeight } from "../../enums";
 
@@ -36,35 +37,24 @@ export const Header = styled.h1`
   font-weight: ${FontWeight.Light};
 `;
 
-export const RightBottomShape = styled.img`
-  width: fit-content;
-  height: 400px;
-  position: absolute;
-  right: 0;
-  bottom: 0;
+export const RegisterContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
 `;
 
-export const TopLeftShape = styled.img`
-  width: fit-content;
-  height: 400px;
-  position: absolute;
-  top: 0;
-  left: 0;
+export const StyledLink = styled(Link)`
+  font-weight: ${FontWeight.Light};
+  font-size: 14px;
+  color: ${Color.Pink300};
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
-
-export const LeftBottomShape = styled.img`
-  width: fit-content;
-  height: 400px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-`;
-
-export const RightTopShape = styled.img`
-  width: fit-content;
-  height: 400px;
-  position: absolute;
-  top: 0;
-  right: 0;
+export const RegisterText = styled.p`
+  color: ${Color.Gray400};
+  font-size: 14px;
 `;

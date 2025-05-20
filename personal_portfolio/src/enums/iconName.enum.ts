@@ -1,3 +1,3 @@
 export enum IconName {
-  Main = 'main',
+  Logout = 'logout',
 }

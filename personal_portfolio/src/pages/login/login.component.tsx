@@ -1,17 +1,13 @@
+import React from 'react';
+
+import { Path } from '../../enums';
 import { Form } from './components/form/form.component';
-import { Container, ContentContainer, Header, LeftBottomShape, RightBottomShape, TopLeftShape, Wrapper } from './login.styled';
-
-import ShapeImage from './images/books.svg';
-import ShapeRoomImage from './images/room.svg';
-import Shape1 from './images/shape.svg';
-
+import { Container, ContentContainer, Header, RegisterContainer, RegisterText, StyledLink, Wrapper } from './login.styled';
 
 export const Login: React.FC = (): JSX.Element => {
 
   return (
     <Wrapper>
-      <TopLeftShape src={ShapeRoomImage} />
-      <LeftBottomShape src={Shape1} />
       <Container>
         <ContentContainer>
           <Header>
@@ -19,9 +15,12 @@ export const Login: React.FC = (): JSX.Element => {
             Zaloguj się
           </Header>
           <Form />
+          <RegisterContainer>
+            <RegisterText>Nie masz konta ?</RegisterText>
+            <StyledLink to={Path.Registration}>Zarejestruj się</StyledLink>
+          </RegisterContainer>
         </ContentContainer>
       </Container>
-      <RightBottomShape src={ShapeImage} />
     </Wrapper>
   );
 };

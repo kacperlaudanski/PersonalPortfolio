@@ -12,6 +12,9 @@ export enum Color {
   Blue500 = '#009BF3',
   Pink300 = '#EFADE6',
   Pink600 = '#E86A92',
+  Red100 = '#F5958F',
+  Red300 = '#EF1A11',
+  Red800 = '#A42017',
   Yellow300 = '#F7E733',
   Teal700 = '#41E2BA',
 }

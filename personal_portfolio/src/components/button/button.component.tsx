@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { BaseButton } from './button.styled';
 import { ButtonProps } from './button.types';
 
@@ -6,13 +8,13 @@ export const Button: React.FC<ButtonProps> = (props: ButtonProps): JSX.Element =
 
   return (
     <BaseButton
-      $fullWidth={fullWidth}
+      $fullWidth={!!fullWidth}
+      $reversed={!!reversed}
       $theme={theme}
       $variant={variant}
       className={className}
       disabled={disabled}
       onClick={onClick}
-      reversed={reversed}
     >
       {label}
     </BaseButton>
