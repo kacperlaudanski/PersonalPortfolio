@@ -4,6 +4,7 @@ import { Controller, useForm, UseFormReturn } from 'react-hook-form';
 
 import { Button, Input } from '../../../../components'
 import { ButtonTheme, ButtonVariant } from '../../../../enums'
+import { doCreateUserWithEmailAndPassword } from '../../../../firebase';
 
 import { userSchema } from "./form.schema";
 import { AgreementContainer, FlexWrapper, FormContainer, FormWrapper, Headline, Subheader, Wrapper } from './form.styled'
@@ -19,10 +20,12 @@ export const Form: React.FC = () => {
       user_password: '',
       user_password_repeat: '',
     },
-    resolver: zodResolver(userSchema)
+    resolver: zodResolver(userSchema),
   });
 
-  const onSubmit: () => void = (): void => {};
+  const onSubmit: (data: Answers) => Promise<void> = async (data: Answers): Promise<void> => {
+    await doCreateUserWithEmailAndPassword(data.user_email, data.user_password);
+  };
 
   return (
     <Wrapper>
