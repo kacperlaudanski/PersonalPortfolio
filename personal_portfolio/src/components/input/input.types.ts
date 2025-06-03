@@ -1,13 +1,11 @@
-import { ReactNode, SyntheticEvent } from 'react';
+import { DetailedHTMLProps, InputHTMLAttributes, ReactNode } from 'react';
+import { FieldError } from 'react-hook-form';
 
-export interface InputProps {
-  onChange: (e: SyntheticEvent) => void;
-  placeholder: string;
-  type: string;
+export interface InputProps extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
   className?: string;
+  errorMessage?: string;
   leftElement?: ReactNode;
   rightElement?: ReactNode;
-  value?: string | number;
   withError?: boolean;
 }
 

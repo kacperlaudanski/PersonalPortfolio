@@ -4,6 +4,13 @@ import { Color } from '../../enums';
 
 import { WrapperProps } from './input.types';
 
+export const Wrapper = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+`;
+
 export const InputElement = styled.input`
   flex: 1;
   height: 100%;
@@ -18,7 +25,7 @@ const errorStyles: RuleSet<object> = css`
   border: 2px solid ${Color.Red300};
 `;
 
-export const Wrapper = styled.div<WrapperProps>`
+export const InputWrapper = styled.div<WrapperProps>`
   width: 100%;
   height: 45px;
   border-radius: 5px;
@@ -28,7 +35,7 @@ export const Wrapper = styled.div<WrapperProps>`
   ${({ $withError }: WrapperProps): RuleSet | false => $withError && errorStyles};
 
   &:has(${InputElement}:focus) {
-    outline: 2px solid ${Color.Teal700};
+    outline: ${({ $withError }: WrapperProps): string | false => $withError ? 'none' : '2px solid ${Color.Teal700}'};
   }
 `;
 
@@ -48,4 +55,10 @@ export const LeftElement = styled.div`
 
 export const RightElement = styled.div`
   ${sideElementsStyles};
+`;
+
+export const ErrorMessage = styled.p`
+  color: ${Color.Red300};
+  font-size: 10px;
+  margin: 0;
 `;

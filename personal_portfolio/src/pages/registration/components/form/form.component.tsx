@@ -1,10 +1,12 @@
 import { zodResolver } from '@hookform/resolvers/zod';
+import { UserCredential } from 'firebase/auth';
 import React from 'react'
 import { Controller, useForm, UseFormReturn } from 'react-hook-form';
+import { NavigateFunction, redirect, useNavigate } from 'react-router';
 
 import { Button, Input } from '../../../../components'
-import { ButtonTheme, ButtonVariant } from '../../../../enums'
-import { doCreateUserWithEmailAndPassword } from '../../../../firebase';
+import { ButtonTheme, ButtonVariant, Path } from '../../../../enums'
+import { doCreateUserWithEmailAndPassword, doSendEmailVerification } from '../../../../firebase';
 
 import { userSchema } from "./form.schema";
 import { AgreementContainer, FlexWrapper, FormContainer, FormWrapper, Headline, Subheader, Wrapper } from './form.styled'
@@ -22,9 +24,17 @@ export const Form: React.FC = () => {
     },
     resolver: zodResolver(userSchema),
   });
+  const navigate: NavigateFunction = useNavigate();
 
   const onSubmit: (data: Answers) => Promise<void> = async (data: Answers): Promise<void> => {
-    await doCreateUserWithEmailAndPassword(data.user_email, data.user_password);
+    const response: UserCredential = await doCreateUserWithEmailAndPassword(data.user_email, data.user_password);
+    
+    if (response) {
+      await doSendEmailVerification();
+      navigate(Path.EmailVerification);
+    } else {
+      navigate(Path.Error);
+    }
   };
 
   return (
@@ -42,14 +52,26 @@ export const Form: React.FC = () => {
               control={control}
               name='user_name'
               render={({ field }: ControllerRender<'user_name'>): JSX.Element => (
-                <Input {...field} placeholder='Imię' type='text' withError={!!errors.user_name} />
+                <Input
+                  {...field}
+                  errorMessage={errors.user_name?.message}
+                  placeholder='Imię'
+                  type='text'
+                  withError={!!errors.user_name}
+                />
               )}
             />
             <Controller
               control={control}
               name='user_surname'
               render={({ field }: ControllerRender<'user_surname'>): JSX.Element => (
-                <Input {...field} placeholder='Nazwisko' type='text' withError={!!errors.user_surname} />
+                <Input
+                  {...field}
+                  errorMessage={errors.user_surname?.message}
+                  placeholder='Nazwisko'
+                  type='text'
+                  withError={!!errors.user_surname}
+                />
               )}
             />
           </FlexWrapper>
@@ -57,7 +79,13 @@ export const Form: React.FC = () => {
             control={control}
             name='user_email'
             render={({ field }: ControllerRender<'user_email'>): JSX.Element => (
-              <Input {...field} placeholder='Email' type='text' withError={!!errors.user_email} />
+              <Input
+                {...field}
+                errorMessage={errors.user_email?.message}
+                placeholder='Email'
+                type='text'
+                withError={!!errors.user_email}
+              />
             )}
           />
           <FlexWrapper>
@@ -65,14 +93,26 @@ export const Form: React.FC = () => {
               control={control}
               name='user_password'
               render={({ field }: ControllerRender<'user_password'>): JSX.Element => (
-                <Input {...field} placeholder='Hasło' type='password' withError={!!errors.user_password} />
+                <Input
+                  {...field}
+                  errorMessage={errors.user_password?.message}
+                  placeholder='Hasło'
+                  type='password'
+                  withError={!!errors.user_password}
+                />
               )}
             />
             <Controller
               control={control}
               name='user_password_repeat'
               render={({ field }: ControllerRender<'user_password_repeat'>): JSX.Element => (
-                <Input {...field} placeholder='Potwierdź hasło' type='text' withError={!!errors.user_password_repeat} />
+                <Input
+                  {...field}
+                  errorMessage={errors.user_password_repeat?.message}
+                  placeholder='Potwierdź hasło'
+                  type='password'
+                  withError={!!errors.user_password_repeat}
+                />
               )}
             />
           </FlexWrapper>

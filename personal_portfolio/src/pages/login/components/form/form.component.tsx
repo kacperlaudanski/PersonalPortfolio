@@ -1,6 +1,5 @@
-import * as React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Dispatch } from 'redux';
+import React from 'react';
+
 import { Button, Input } from '../../../../components';
 import { ButtonTheme, ButtonVariant } from '../../../../enums';
 

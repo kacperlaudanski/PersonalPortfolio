@@ -5,6 +5,8 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   sendPasswordResetEmail,
+  sendEmailVerification,
+  User,
 } from 'firebase/auth';
 
 import { auth } from './firebase.config';
@@ -34,6 +36,6 @@ export const resetPassword = (email: string): Promise<void> => sendPasswordReset
 //     return updatePassword(auth.currentUser, password);
 //   }
 
-// export const deSendEmailVerification = () => sendEmailVerification(auth.currentUser, {
-//   url: `${window.location.origin}/home`
-// })
+export const doSendEmailVerification = () => sendEmailVerification(auth.currentUser as User, {
+  url: `${window.location.origin}/login`
+});

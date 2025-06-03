@@ -1,6 +1,7 @@
 import { onAuthStateChanged, Unsubscribe, User } from 'firebase/auth';
 import React, { ReactNode, useContext, useEffect, useState } from 'react';
-import { auth } from '../firebase/firebase.config';
+import { auth } from '../../firebase/firebase.config';
+import { UseAuth } from '../../types';
 
 const defaultContext = {
   isUserLoggedIn: false,
@@ -11,9 +12,9 @@ const defaultContext = {
   setCurrentUser: () => {},
 }
 
-const AuthContext: React.Context<unknown> = React.createContext<unknown>(defaultContext);
+const AuthContext: React.Context<UseAuth> = React.createContext<UseAuth>(defaultContext);
 
-export const useAuth: () => unknown = (): unknown => useContext(AuthContext);
+export const useAuth: () => UseAuth = (): UseAuth => useContext(AuthContext);
 
 export const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState<User>();
