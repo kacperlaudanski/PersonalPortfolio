@@ -4,19 +4,6 @@ import { Color } from '../../../../enums';
 
 import { SideMenuItemBaseProps } from './sideMenuItem.types';
 
-export const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-`;
-
-const activeItemStyles: RuleSet = css`
-  background-color: ${Color.Pink300};
-  border: none;
-  fill: ${Color.White};
-`;
-
 export const IconContainer = styled.div<SideMenuItemBaseProps>`
   width: 40px;
   height: 40px;
@@ -26,4 +13,27 @@ export const IconContainer = styled.div<SideMenuItemBaseProps>`
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: .3s linear;
+`;
+
+export const Wrapper = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  &:hover {
+    ${IconContainer} {
+      background-color: ${Color.Pink600};
+    }
+  }
+`;
+
+const activeItemStyles: RuleSet = css`
+  background-color: ${Color.Pink300};
+  border: none;
+  fill: ${Color.White};
 `;

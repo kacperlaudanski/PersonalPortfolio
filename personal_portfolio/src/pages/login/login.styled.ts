@@ -1,6 +1,7 @@
-import { Link } from "react-router";
-import styled from "styled-components";
-import { Color, FontWeight } from "../../enums";
+import { Link } from 'react-router';
+import { styled } from 'styled-components';
+
+import { Color, FontWeight } from '../../enums';
 
 export const Wrapper = styled.div`
   width: 100%;

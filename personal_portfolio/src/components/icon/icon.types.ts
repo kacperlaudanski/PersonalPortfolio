@@ -2,7 +2,7 @@ import { IconName } from '../../enums';
 
 export interface IconProps {
   name: IconName;
-  size: number;
+  size?: number;
   className?: string;
 }
 

@@ -7,13 +7,13 @@ import { IconContainer, Wrapper } from './sideMenuItem.styled';
 import { SideMenuItemProps } from './sideMenuItem.types';
 
 export const SideMenuItem: React.FC<SideMenuItemProps> = (props: SideMenuItemProps): JSX.Element => {
-  const { path }: SideMenuItemProps = props;
+  const { icon, path }: SideMenuItemProps = props;
   const { pathname }: Location<string> = useLocation();
 
   return (
     <Wrapper>
       <IconContainer $active={pathname === path}>
-        {/* <Icon name={IconName.Logout} size={20} /> */}
+        <Icon name={icon} size={16} />
       </IconContainer>
     </Wrapper>
   );

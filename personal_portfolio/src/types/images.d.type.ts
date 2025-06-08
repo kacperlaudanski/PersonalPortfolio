@@ -18,7 +18,9 @@ declare module '*.gif' {
   export default content;
 }
 
-declare module '*.svg' {
-  const content: string;
-  export default content;
-}
+// declare module '*.svg' {
+//   import * as React from 'react';
+
+//   const src: string;
+//   export default src;
+// }

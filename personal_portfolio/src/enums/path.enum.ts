@@ -5,4 +5,6 @@ export enum Path {
   Registration = '/registration',
   Books = '/books',
   AddBook = '/addBook',
+  EmailVerification = '/emailVerification',
+  Error = '/error'
 }

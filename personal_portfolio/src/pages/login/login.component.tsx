@@ -1,7 +1,8 @@
 import React from 'react';
 
 import { Path } from '../../enums';
-import { Form } from './components/form/form.component';
+
+import { Form } from './components';
 import { Container, ContentContainer, Header, RegisterContainer, RegisterText, StyledLink, Wrapper } from './login.styled';
 
 export const Login: React.FC = (): JSX.Element => {
@@ -11,7 +12,6 @@ export const Login: React.FC = (): JSX.Element => {
       <Container>
         <ContentContainer>
           <Header>
-            {/* TODO: add translation system */}
             Zaloguj się
           </Header>
           <Form />
