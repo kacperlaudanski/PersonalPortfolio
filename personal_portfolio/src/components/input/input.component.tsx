@@ -3,14 +3,14 @@ import React from 'react';
 import { ErrorMessage, InputElement, InputWrapper, LeftElement, RightElement, Wrapper } from './input.styled';
 import { InputProps } from './input.types';
 
-export const Input: React.FC<InputProps> = (props: InputProps): JSX.Element => {
+export const Input = React.forwardRef<HTMLInputElement, InputProps>((props, ref): JSX.Element => {
   const { className, errorMessage, leftElement, rightElement, withError, ...rest }: InputProps = props;
 
   return (
     <Wrapper>
       <InputWrapper $withError={!!withError} className={className}>
         {!!leftElement && <LeftElement>{leftElement}</LeftElement>}
-        <InputElement {...rest} />
+        <InputElement {...rest} ref={ref} />
         {!!rightElement && <RightElement>{rightElement}</RightElement>}
       </InputWrapper>
       {!!withError && (
@@ -20,4 +20,4 @@ export const Input: React.FC<InputProps> = (props: InputProps): JSX.Element => {
       )}
     </Wrapper>
   );
-};
+});

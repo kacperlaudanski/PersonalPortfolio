@@ -1,7 +1,9 @@
 import React from 'react';
 
 import { Headline } from '../../components/headline/headline.component';
+import { useAuth } from '../../contexts';
 import { HeadlineVariant } from '../../enums';
+import { UseAuth } from '../../types';
 import { BookGroup, Wrapper } from './booksPage.styled';
 import { BookCard } from './components/bookCard/bookCard.component';
 import ExampleImage from './components/bookCard/images/book.example.jpg'

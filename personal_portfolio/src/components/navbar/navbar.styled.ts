@@ -16,16 +16,17 @@ export const Wrapper = styled.nav`
   z-index: 1;
 `;
 
-export const ItemsContainer = styled.div`
+export const TileContainer = styled.div`
+  width: 80px;
   height: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
+  border-left: 1px solid ${Color.Gray200};
 `;
 
-export const AvatarContainer = styled.div`
+export const ItemsContainer = styled.div`
   height: 100%;
-  padding: 20px;
-  border-left: 1px solid ${Color.Gray200};
   display: flex;
   align-items: center;
 `;
@@ -35,15 +36,6 @@ export const Avatar = styled.img`
   height: 35px;
   border-radius: 100px;
   border: 1px solid ${Color.Gray200};
-`;
-
-export const LanguagePanel = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 20px;
-  border-left: 1px solid ${Color.Gray200};
-  height: 100%;
 `;
 
 export const languageButtonStyles = css`
@@ -65,21 +57,13 @@ export const EnLanguageButton = styled.button`
   background-image: url(${EnImage});
 `;
 
-export const LogoutContainer = styled.div`
-  padding: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-left: 1px solid ${Color.Gray200};
-  height: 100%;
-`;
-
 export const LogoutButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 20px;
   height: 20px;
-  background-color: none;
+  background: none;
   border: none;
   cursor: pointer;
-  background-size: cover;
-  background-position: center;
 `;

@@ -1,8 +1,8 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router';
+
 import { useAuth } from './contexts';
 import { PrivateRoute } from './contexts/auth/components';
-
 import { Path } from './enums';
 import { GlobalStyles } from './globalStyles';
 import { Layout } from './layout';
@@ -14,10 +14,8 @@ import { Registration } from './pages/registration/registration';
 import { UseAuth } from './types';
 
 function App() {
-
   const { currentUser }: UseAuth = useAuth();
 
-  console.log(currentUser)
   const routes = createBrowserRouter([
     {
       path: Path.Default,

@@ -7,3 +7,4 @@ export { FontWeight } from './fontWeight.enum';
 export { HeadlineVariant } from './headlineVariant.enum';
 export { IconName } from './iconName.enum';
 export { Path } from './path.enum';
+export { ZIndex } from './zindex.enum';
